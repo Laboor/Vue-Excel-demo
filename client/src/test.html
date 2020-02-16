@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+  <title>Hello, world!</title>
+  <script src="./loadsh.js"></script>
+</head>
+
+<body>
+  <script>
+    var blob = new Blob([String.fromCharCode(0xFEFF), '123'])
+    var src = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.innerHTML = '下载';
+    //设置下载的文件名
+    link.download = blob;
+    // link.style.display = 'none';
+    //设置下载路径
+    link.href = src;
+    //触发点击
+    document.body.appendChild(link);
+    
+    //移除节点
+    document.body.appendChild(link);
+ 
+  </script>
+</body>
+
+</html>
